@@ -15,17 +15,17 @@
 
 
 
-<meta name="description" content="（1）：float InvSqrt(float x){float xhalf = 0.5fx;int i = (int)&amp;x; // get bits for floating VALUEi = 0x5f375a86- (i&amp;gt;&amp;gt;1); // gives initial guess y0x = (float)&amp;i; // convert bits BACK to floatx = x(1">
+<meta name="description" content="分享几个我觉得不错的平方根算法：">
 <meta name="keywords">
 <meta property="og:type" content="article">
 <meta property="og:title" content="计算平方根的函数代码">
 <meta property="og:url" content="http://yoursite.com/2017/04/19/计算平方根/index.html">
 <meta property="og:site_name" content="kirito1234567890">
-<meta property="og:description" content="（1）：float InvSqrt(float x){float xhalf = 0.5fx;int i = (int)&amp;x; // get bits for floating VALUEi = 0x5f375a86- (i&amp;gt;&amp;gt;1); // gives initial guess y0x = (float)&amp;i; // convert bits BACK to floatx = x(1">
-<meta property="og:updated_time" content="2017-04-19T15:01:24.000Z">
+<meta property="og:description" content="分享几个我觉得不错的平方根算法：">
+<meta property="og:updated_time" content="2017-04-20T05:03:24.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="计算平方根的函数代码">
-<meta name="twitter:description" content="（1）：float InvSqrt(float x){float xhalf = 0.5fx;int i = (int)&amp;x; // get bits for floating VALUEi = 0x5f375a86- (i&amp;gt;&amp;gt;1); // gives initial guess y0x = (float)&amp;i; // convert bits BACK to floatx = x(1">
+<meta name="twitter:description" content="分享几个我觉得不错的平方根算法：">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -293,7 +293,9 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>（1）：float InvSqrt(float x)<br>{<br>float xhalf = 0.5f<em>x;<br>int i = </em>(int<em>)&x; // get bits for floating VALUE<br>i = 0x5f375a86- (i&gt;&gt;1); // gives initial guess y0<br>x = </em>(float<em>)&i; // convert bits BACK to float<br>x = x</em>(1.5f-xhalf<em>x</em>x); // Newton step, repeating increases accuracy<br>x = x<em>(1.5f-xhalf</em>x<em>x); // Newton step, repeating increases accuracy<br>x = x</em>(1.5f-xhalf<em>x</em>x); // Newton step, repeating increases accuracy</p>
+        <p>分享几个我觉得不错的平方根算法：</p>
+<a id="more"></a>
+<p>（1）：float InvSqrt(float x)<br>{<br>float xhalf = 0.5f<em>x;<br>int i = </em>(int<em>)&x; // get bits for floating VALUE<br>i = 0x5f375a86- (i&gt;&gt;1); // gives initial guess y0<br>x = </em>(float<em>)&i; // convert bits BACK to float<br>x = x</em>(1.5f-xhalf<em>x</em>x); // Newton step, repeating increases accuracy<br>x = x<em>(1.5f-xhalf</em>x<em>x); // Newton step, repeating increases accuracy<br>x = x</em>(1.5f-xhalf<em>x</em>x); // Newton step, repeating increases accuracy</p>
 <p>return 1/x;<br>}</p>
 <p>（2）：float SqrtByBisection(float n) //用二分法<br>{<br>if(n<0) 小于0的按照你需要的处理="" return="" n;="" float="" mid,last;="" low,up;="" low="0,up=n;" mid="(low+up)/2;" do="" {="" if(mid*mid="">n)<br>up=mid;<br>else<br>low=mid;<br>last=mid;<br>mid=(up+low)/2;<br>}while(abs(mid-last) &gt; eps);//精度控制<br>return mid;<br>} </0)></p>
 <p>（3）（牛顿迭代法）：float SqrtByNewton(float x)<br>{<br>float val = x;//最终<br>float last;//保存上一个计算的值<br>do<br>{<br>last = val;<br>val =(val + x/val) / 2;<br>}while(abs(val-last) &gt; eps);<br>return val;<br>}</p>
@@ -314,7 +316,7 @@
         <p><span>本文标题:</span><a href="/2017/04/19/计算平方根/">计算平方根的函数代码</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">euphy</a></p>
         <p><span>发布时间:</span>2017-04-19, 10:47:14</p>
-        <p><span>最后更新:</span>2017-04-19, 23:01:24</p>
+        <p><span>最后更新:</span>2017-04-20, 13:03:24</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2017/04/19/计算平方根/" title="计算平方根的函数代码">http://yoursite.com/2017/04/19/计算平方根/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2017/04/19/计算平方根/　　作者: euphy" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -335,6 +337,12 @@
                 </a>
             </div>
         
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2017/04/19/人工智能学习笔记（1）/">
+                    人工智能学习笔记（1）
+                </a>
+            </div>
         
     </nav>
 
@@ -408,11 +416,13 @@
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2017/04/19/人工智能学习笔记（1）/" title="下一篇: 人工智能学习笔记（1）">
+                <i class="fa fa-angle-right"></i>
+            </a>
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/04/19/First Day/">First Day</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/19/人工智能学习笔记（1）/">人工智能学习笔记（1）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/19/hello-world/">Hello World</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/19/计算平方根/">计算平方根的函数代码</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/04/19/First Day/">First Day</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/19/hello-world/">Hello World</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/19/计算平方根/">计算平方根的函数代码</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/19/人工智能学习笔记（1）/">人工智能学习笔记（1）</a></li></ul>
 
 
 

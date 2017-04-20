@@ -317,236 +317,6 @@
 
 
   
-    <article id="post-人工智能学习笔记（1）" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/04/19/人工智能学习笔记（1）/" class="article-date">
-      <time datetime="2017-04-19T02:47:14.000Z" itemprop="datePublished">2017-04-19</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/19/人工智能学习笔记（1）/">人工智能学习笔记（1）</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <pre><code>最开始也不知道怎么写啊。。。很尴尬的，自己也是才接触到核心的东西。为了不让学习的东西忘掉，用博客的方式记录自己的学习进度吧。
-第一篇文章就先从机器学习（深度学习）开始吧，把自己找到的资料贴上来，最后写点什么吧，总不能都是copy的啊
-
-
-下面是我找的十二种机器学习的主流算法还有优劣点，有同感🙂
-</code></pre><p>1.正则化算法（Regularization Algorithms）</p>
-<p>它是另一种方法（通常是回归方法）的拓展，这种方法会基于模型复杂性对其进行惩罚，它喜欢相对简单能够更好的泛化的模型。</p>
-<p>例子：</p>
-<p>岭回归（Ridge Regression）</p>
-<p>最小绝对收缩与选择算子（LASSO）</p>
-<p>GLASSO</p>
-<p>弹性网络（Elastic Net）</p>
-<p>最小角回归（Least-Angle Regression）</p>
-<p>优点：</p>
-<p>其惩罚会减少过拟合</p>
-<p>总会有解决方法</p>
-<p>缺点：</p>
-<p>惩罚会造成欠拟合</p>
-<p>很难校准</p>
-<p>2.集成算法（Ensemble algorithms）</p>
-<p>集成方法是由多个较弱的模型集成模型组，其中的模型可以单独进行训练，并且它们的预测能以某种方式结合起来去做出一个总体预测。</p>
-<p>该算法主要的问题是要找出哪些较弱的模型可以结合起来，以及结合的方法。这是一个非常强大的技术集，因此广受欢迎。</p>
-<p>Boosting</p>
-<p>Bootstrapped Aggregation（Bagging）</p>
-<p>AdaBoost</p>
-<p>层叠泛化（Stacked Generalization）（blending）</p>
-<p>梯度推进机（Gradient Boosting Machines，GBM）</p>
-<p>梯度提升回归树（Gradient Boosted Regression Trees，GBRT）</p>
-<p>随机森林（Random Forest）</p>
-<p>优点：</p>
-<p>当先最先进的预测几乎都使用了算法集成。它比使用单个模型预测出来的结果要精确的多</p>
-<p>缺点：</p>
-<p>需要大量的维护工作</p>
-<p>3.决策树算法（Decision Tree Algorithm）</p>
-<p>决策树学习使用一个决策树作为一个预测模型，它将对一个 item（表征在分支上）观察所得映射成关于该 item 的目标值的结论（表征在叶子中）。</p>
-<p>树模型中的目标是可变的，可以采一组有限值，被称为分类树；在这些树结构中，叶子表示类标签，分支表示表征这些类标签的连接的特征。</p>
-<p>例子：</p>
-<p>分类和回归树（Classification and Regression Tree，CART）</p>
-<p>Iterative Dichotomiser 3（ID3）</p>
-<p>C4.5 和 C5.0（一种强大方法的两个不同版本）</p>
-<p>优点：</p>
-<p>容易解释</p>
-<p>非参数型</p>
-<p>缺点：</p>
-<p>趋向过拟合</p>
-<p>可能或陷于局部最小值中</p>
-<p>没有在线学习</p>
-<p>4.回归（Regression）算法</p>
-<p>回归是用于估计两种变量之间关系的统计过程。当用于分析因变量和一个 多个自变量之间的关系时，该算法能提供很多建模和分析多个变量的技巧。具体一点说，回归分析可以帮助我们理解当任意一个自变量变化，另一个自变量不变时，因变量变化的典型值。最常见的是，回归分析能在给定自变量的条件下估计出因变量的条件期望。</p>
-<p>回归算法是统计学中的主要算法，它已被纳入统计机器学习。</p>
-<p>例子：</p>
-<p>普通最小二乘回归（Ordinary Least Squares Regression，OLSR）</p>
-<p>线性回归（Linear Regression）</p>
-<p>逻辑回归（Logistic Regression）</p>
-<p>逐步回归（Stepwise Regression）</p>
-<p>多元自适应回归样条（Multivariate Adaptive Regression Splines，MARS）</p>
-<p>本地散点平滑估计（Locally Estimated Scatterplot Smoothing，LOESS）</p>
-<p>优点：</p>
-<p>直接、快速</p>
-<p>知名度高</p>
-<p>缺点：</p>
-<p>要求严格的假设</p>
-<p>需要处理异常值</p>
-<p>5.人工神经网络</p>
-<p>人工神经网络是受生物神经网络启发而构建的算法模型。</p>
-<p>它是一种模式匹配，常被用于回归和分类问题，但拥有庞大的子域，由数百种算法和各类问题的变体组成。</p>
-<p>例子：</p>
-<p>感知器</p>
-<p>反向传播</p>
-<p>Hopfield 网络</p>
-<p>径向基函数网络（Radial Basis Function Network，RBFN）</p>
-<p>优点：</p>
-<p>在语音、语义、视觉、各类游戏（如围棋）的任务中表现极好。</p>
-<p>算法可以快速调整，适应新的问题。</p>
-<p>缺点：</p>
-<p>需要大量数据进行训练</p>
-<p>训练要求很高的硬件配置</p>
-<p>模型处于「黑箱状态」，难以理解内部机制</p>
-<p>元参数（Metaparameter）与网络拓扑选择困难。</p>
-<p>6.深度学习（Deep Learning）</p>
-<p>深度学习是人工神经网络的最新分支，它受益于当代硬件的快速发展。</p>
-<p>众多研究者目前的方向主要集中于构建更大、更复杂的神经网络，目前有许多方法正在聚焦半监督学习问题，其中用于训练的大数据集只包含很少的标记。</p>
-<p>例子：</p>
-<p>深玻耳兹曼机（Deep Boltzmann Machine，DBM）</p>
-<p>Deep Belief Networks（DBN）</p>
-<p>卷积神经网络（CNN）</p>
-<p>Stacked Auto-Encoders</p>
-<p>优点/缺点：见神经网络</p>
-<p>支持向量机（Support Vector Machines）</p>
-<p>给定一组训练事例，其中每个事例都属于两个类别中的一个，支持向量机（SVM）训练算法可以在被输入新的事例后将其分类到两个类别中的一个，使自身成为非概率二进制线性分类器。</p>
-<p>SVM 模型将训练事例表示为空间中的点，它们被映射到一幅图中，由一条明确的、尽可能宽的间隔分开以区分两个类别。</p>
-<p>随后，新的示例会被映射到同一空间中，并基于它们落在间隔的哪一侧来预测它属于的类别。</p>
-<p>优点：</p>
-<p>在非线性可分问题上表现优秀</p>
-<p>缺点：</p>
-<p>非常难以训练</p>
-<p>很难解释</p>
-<p>7.降维算法（Dimensionality Reduction Algorithms）</p>
-<p>和集簇方法类似，降维追求并利用数据的内在结构，目的在于使用较少的信息总结或描述数据。</p>
-<p>这一算法可用于可视化高维数据或简化接下来可用于监督学习中的数据。许多这样的方法可针对分类和回归的使用进行调整。</p>
-<p>例子：</p>
-<p>主成分分析（Principal Component Analysis (PCA)）</p>
-<p>主成分回归（Principal Component Regression (PCR)）</p>
-<p>偏最小二乘回归（Partial Least Squares Regression (PLSR)）</p>
-<p>Sammon 映射（Sammon Mapping）</p>
-<p>多维尺度变换（Multidimensional Scaling (MDS)）</p>
-<p>投影寻踪（Projection Pursuit）</p>
-<p>线性判别分析（Linear Discriminant Analysis (LDA)）</p>
-<p>混合判别分析（Mixture Discriminant Analysis (MDA)）</p>
-<p>二次判别分析（Quadratic Discriminant Analysis (QDA)）</p>
-<p>灵活判别分析（Flexible Discriminant Analysis (FDA)）</p>
-<p>优点：</p>
-<p>可处理大规模数据集</p>
-<p>无需在数据上进行假设</p>
-<p>缺点：</p>
-<p>难以搞定非线性数据</p>
-<p>难以理解结果的意义</p>
-<p>8.聚类算法（Clustering Algorithms）</p>
-<p>聚类算法是指对一组目标进行分类，属于同一组（亦即一个类，cluster）的目标被划分在一组中，与其他组目标相比，同一组目标更加彼此相似（在某种意义上）。</p>
-<p>例子：</p>
-<p>K-均值（k-Means）</p>
-<p>k-Medians 算法</p>
-<p>Expectation Maximi 封层 ation (EM)</p>
-<p>9.最大期望算法（EM）</p>
-<p>分层集群（Hierarchical Clstering）</p>
-<p>优点：</p>
-<p>让数据变得有意义</p>
-<p>缺点：</p>
-<p>结果难以解读，针对不寻常的数据组，结果可能无用。</p>
-<p>10.基于实例的算法（Instance-based Algorithms）</p>
-<p>基于实例的算法（有时也称为基于记忆的学习）是这样学 习算法，不是明确归纳，而是将新的问题例子与训练过程中见过的例子进行对比，这些见过的例子就在存储器中。</p>
-<p>之所以叫基于实例的算法是因为它直接从训练实例中建构出假设。这意味这，假设的复杂度能随着数据的增长而变化：最糟的情况是，假设是一个训练项目列表，分类一个单独新实例计算复杂度为 O（n）</p>
-<p>例子：</p>
-<p>K 最近邻（k-Nearest Neighbor (kNN)）</p>
-<p>学习向量量化（Learning Vector Quantization (LVQ)）</p>
-<p>自组织映射（Self-Organizing Map (SOM)）</p>
-<p>局部加权学习（Locally Weighted Learning (LWL)）</p>
-<p>优点：</p>
-<p>算法简单、结果易于解读</p>
-<p>缺点：</p>
-<p>内存使用非常高</p>
-<p>计算成本高</p>
-<p>不可能用于高维特征空间</p>
-<p>11.贝叶斯算法（Bayesian Algorithms）</p>
-<p>贝叶斯方法是指明确应用了贝叶斯定理来解决如分类和回归等问题的方法。</p>
-<p>例子：</p>
-<p>朴素贝叶斯（Naive Bayes）</p>
-<p>高斯朴素贝叶斯（Gaussian Naive Bayes）</p>
-<p>多项式朴素贝叶斯（Multinomial Naive Bayes）</p>
-<p>平均一致依赖估计器（Averaged One-Dependence Estimators (AODE)）</p>
-<p>贝叶斯信念网络（Bayesian Belief Network (BBN)）</p>
-<p>贝叶斯网络（Bayesian Network (BN)）</p>
-<p>优点：</p>
-<p>快速、易于训练、给出了它们所需的资源能带来良好的表现</p>
-<p>缺点：</p>
-<p>如果输入变量是相关的，则会出现问题</p>
-<p>12.关联规则学习算法（Association Rule Learning Algorithms）</p>
-<p>关联规则学习方法能够提取出对数据中的变量之间的关系的最佳解释。比如说一家超市的销售数据中存在规则 {洋葱，土豆}=&gt; {汉堡}，那说明当一位客户同时购买了洋葱和土豆的时候，他很有可能还会购买汉堡肉。</p>
-<p>例子：</p>
-<p>Apriori 算法（Apriori algorithm）</p>
-<p>Eclat 算法（Eclat algorithm）</p>
-<p>FP-growth</p>
-<p>图模型（Graphical Models）</p>
-<p>图模型或概率图模型（PGM/probabilistic graphical model）是一种概率模型，一个图（graph）可以通过其表示随机变量之间的条件依赖结构（conditional dependence structure）。</p>
-<p>例子：</p>
-<p>贝叶斯网络（Bayesian network）</p>
-<p>马尔可夫随机域（Markov random field）</p>
-<p>链图（Chain Graphs）</p>
-<p>祖先图（Ancestral graph）</p>
-<p>优点：</p>
-<p>模型清晰，能被直观地理解</p>
-<p>缺点：</p>
-<p>确定其依赖的拓扑很困难，有时候也很模糊</p>
-<p>个人觉得，回归算法，SVM,贝叶斯和深度学习是四种比较常见的算法，并不是因为效率都很高，回归算法最基础，很适合数学基础不好的初学者，但是由于本身的局限性，对于不寻常的数据会束手无策，可能会导致模型崩溃；而贝叶斯算法相对安全，很快速，是一部分人的选择，但是并不是很科学，基于的原理也就是贝叶斯定理（概率论中学过的）；支持向量机是我比较喜欢的算法，也是发展前景很大的一个方向，简单的说就是用一根线分开一堆两种颜色的球，正好处于颜色的分界线，而且离线最近的球的距离最小。无论是二维 还是三维都很方便。深度学习的话，只是神经网络的分支，比较常见的也是最为人熟知的就是卷积神经网络，这个在GitHub 上有介绍，在Matlab中也有相应的工具箱去实现。</p>
-<p>今天是个人博客搭建的第一天，这篇文章也是拼出来的，从各种收藏和大佬那里拼在一起的，加上自己的认识感觉成就感还是满满的。我会尽力的去开发这博客，尽量能够实现各种功能，包括评论和浏览量，以及站内搜索引擎（目前的开发方向），不知道有多少人能看得到这篇文章，还是想把这个博客当作自己的家，一个可以随意说话的家。</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
     <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -576,16 +346,8 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
+              <p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+          
       
     </div>
     
@@ -594,6 +356,10 @@
       
 
       
+      
+        <p class="article-more-link">
+          <a href="/2017/04/19/hello-world/#more">阅读全文 >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -640,17 +406,8 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>（1）：float InvSqrt(float x)<br>{<br>float xhalf = 0.5f<em>x;<br>int i = </em>(int<em>)&x; // get bits for floating VALUE<br>i = 0x5f375a86- (i&gt;&gt;1); // gives initial guess y0<br>x = </em>(float<em>)&i; // convert bits BACK to float<br>x = x</em>(1.5f-xhalf<em>x</em>x); // Newton step, repeating increases accuracy<br>x = x<em>(1.5f-xhalf</em>x<em>x); // Newton step, repeating increases accuracy<br>x = x</em>(1.5f-xhalf<em>x</em>x); // Newton step, repeating increases accuracy</p>
-<p>return 1/x;<br>}</p>
-<p>（2）：float SqrtByBisection(float n) //用二分法<br>{<br>if(n<0) 小于0的按照你需要的处理="" return="" n;="" float="" mid,last;="" low,up;="" low="0,up=n;" mid="(low+up)/2;" do="" {="" if(mid*mid="">n)<br>up=mid;<br>else<br>low=mid;<br>last=mid;<br>mid=(up+low)/2;<br>}while(abs(mid-last) &gt; eps);//精度控制<br>return mid;<br>} </0)></p>
-<p>（3）（牛顿迭代法）：float SqrtByNewton(float x)<br>{<br>float val = x;//最终<br>float last;//保存上一个计算的值<br>do<br>{<br>last = val;<br>val =(val + x/val) / 2;<br>}while(abs(val-last) &gt; eps);<br>return val;<br>}</p>
-<p>—————、<br>插一个非常高效的求平方根倒数的算法：<br>float Q_rsqrt( float number )<br>{<br>long i;<br>float x2, y;<br>const float threehalfs = 1.5F;</p>
-<p>x2 = number <em> 0.5F;<br>y   = number;<br>i   = </em> ( long <em> ) &y;   // evil floating point bit level hacking<br>i   = 0x5f3759df - ( i &gt;&gt; 1 ); // what the fuck?<br>y   = </em> ( float <em> ) &i;<br>y   = y </em> ( threehalfs - ( x2 <em> y </em> y ) ); // 1st iteration<br>// y   = y <em> ( threehalfs - ( x2 </em> y * y ) ); // 2nd iteration, this can be removed</p>
-<p>#ifndef Q3_VM</p>
-<p>#ifdef <strong>linux</strong><br>assert( !isnan(y) ); // bk010122 - FPE?</p>
-<p>#endif</p>
-<p>#endif<br>return y;<br>}  </p>
-
+              <p>分享几个我觉得不错的平方根算法：</p>
+          
       
     </div>
     
@@ -659,6 +416,75 @@
       
 
       
+      
+        <p class="article-more-link">
+          <a href="/2017/04/19/计算平方根/#more">阅读全文 >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-人工智能学习笔记（1）" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/04/19/人工智能学习笔记（1）/" class="article-date">
+      <time datetime="2017-04-19T02:47:14.000Z" itemprop="datePublished">2017-04-19</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/19/人工智能学习笔记（1）/">人工智能学习笔记（1）</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <pre><code>最开始也不知道怎么写啊。。。很尴尬的，自己也是才接触到核心的东西。为了不让学习的东西忘掉，用博客的方式记录自己的学习进度吧。
+第一篇文章就先从机器学习（深度学习）开始吧，把自己找到的资料贴上来，最后写点什么吧，总不能都是copy的啊
+
+
+下面是我找的十二种机器学习的主流算法还有优劣点，有同感🙂
+</code></pre>
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+        <p class="article-more-link">
+          <a href="/2017/04/19/人工智能学习笔记（1）/#more">阅读全文 >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
