@@ -15,17 +15,17 @@
 
 
 
-<meta name="description" content="主要是庆祝自己成功进入实验室，庆祝访问量过50（虽然大部分是自己刷的）。这是人工智能入门的第一步，感谢徐瑞老师给我信任和支持，耐心的帮我寻找合适的第一份任务–livingstone2">
+<meta name="description" content="由一个数据处理方面的问题引起的对r语言基础命令的复习">
 <meta name="keywords">
 <meta property="og:type" content="article">
-<meta property="og:title" content="随笔-4.21">
-<meta property="og:url" content="http://yoursite.com/2017/04/21/随笔-4-21/index.html">
+<meta property="og:title" content="R语言学习(2)">
+<meta property="og:url" content="http://yoursite.com/2017/05/03/R语言学习-2/index.html">
 <meta property="og:site_name" content="kirito1234567890">
-<meta property="og:description" content="主要是庆祝自己成功进入实验室，庆祝访问量过50（虽然大部分是自己刷的）。这是人工智能入门的第一步，感谢徐瑞老师给我信任和支持，耐心的帮我寻找合适的第一份任务–livingstone2">
-<meta property="og:updated_time" content="2017-04-21T05:19:27.000Z">
+<meta property="og:description" content="由一个数据处理方面的问题引起的对r语言基础命令的复习">
+<meta property="og:updated_time" content="2017-05-03T09:10:28.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="随笔-4.21">
-<meta name="twitter:description" content="主要是庆祝自己成功进入实验室，庆祝访问量过50（虽然大部分是自己刷的）。这是人工智能入门的第一步，感谢徐瑞老师给我信任和支持，耐心的帮我寻找合适的第一份任务–livingstone2">
+<meta name="twitter:title" content="R语言学习(2)">
+<meta name="twitter:description" content="由一个数据处理方面的问题引起的对r语言基础命令的复习">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -57,7 +57,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>随笔-4.21 | kirito1234567890</title>
+<title>R语言学习(2) | kirito1234567890</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -257,11 +257,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-随笔-4-21" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-R语言学习-2" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/04/21/随笔-4-21/" class="article-date">
-      <time datetime="2017-04-21T05:07:22.000Z" itemprop="datePublished">2017-04-21</time>
+      <a href="/2017/05/03/R语言学习-2/" class="article-date">
+      <time datetime="2017-05-03T07:12:11.000Z" itemprop="datePublished">2017-05-03</time>
 </a>
 
 
@@ -276,7 +276,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      随笔-4.21
+      R语言学习(2)
     </h1>
   
 
@@ -293,9 +293,15 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>   主要是庆祝自己成功进入实验室，庆祝访问量过50（虽然大部分是自己刷的）。这是人工智能入门的第一步，感谢徐瑞老师给我信任和支持，耐心的帮我寻找合适的第一份任务–livingstone2</p>
-<a id="more"></a>
-<p>   没啥写的，最近为了这个目标一直奋斗，从未松懈，连炉石都好久没玩了。。。认真的看书，努力的寻找答案，拼命的想找到自己的方向，无论是R 也好，人工智能也罢，只要我能学，我就去学。从明天开始就要进实验室了，有点兴奋也有不安，自己的储备知识感觉不是很足，感觉师兄们都很厉害，都是大佬（说话连梗都接不上）。。。。尽力而为吧，我想找回本心，找回曾经的自己，那个可以为了真物无所畏惧的自己，无论难易，我都想试一试。网络工程的学习我不会放弃，我想从web前端开发开始，从基础概念先学习，可能离程序员有点距离，但是是我的兴趣，我不想放弃，这个博客就是最好的证明。。谢谢大家</p>
+        <p>  由一个数据处理方面的问题引起的对r语言基础命令的复习</p>
+<a id="more"></a> 
+<pre><code>一组学生参加了数学、科 学和英语考试。为了给所有学生确定一个单一的成绩衡量指标，需要将这些科目的成绩组合起来。 另外，你还想将前20%的学生评定为A，接下来20%的学生评定为B，依次类推。最后，你希望按 字母顺序对学生排序.
+</code></pre><p>   这是一个数据处理和数据管理的基础入门问题，这几天的学习也是从第四单元看到了第五单元，截止到5.2，之前的介绍都是关于数据的处理的基本操作和命令，包括各种各样的概念和定义，也看到了很多包的帮助下，r语言的潜力到底有多大，我想就这个实例来总结一下之前基础的命令。<br>步骤如下：<br>步骤1 原始的学生花名册已经给出了。options(digits=2)限定了输出小数点后数字的 位数，更加便于阅读。<br>步骤2 由于数学、科学和英语考试的分值不同(均值和标准差相去甚远)，在组合之前需 要先让它们变得可以比较。一种方法是将变量进行标准化，这样每科考试的成绩就都是用单位标 准差来表示，而不是以原始的尺度来表示了。这个过程可以使用scale()函数来实现:<br>步骤3 然后，可以通过函数mean()来计算各行的均值以获得综合得分，并使用函数 cbind()将其添加到花名册中:<br>步骤4 函数quantile()给出了学生综合得分的百分位数。可以看到，成绩为A的分界点 为0.74，B的分界点为0.44，等等。<br>步骤5 通过使用逻辑运算符，你可以将学生的百分位数排名重编码为一个新的类别型成绩 2 变量。下面在数据框roster中创建了变量grade。<br>步骤6 你将使用函数strsplit()以空格为界把学生姓名拆分为姓氏和名字。把strsplit() 应用到一个字符串组成的向量上会返回一个列表<br>步骤7 你可以使用函数sapply()提取列表中每个成分的第一个元素，放入一个储存名字 的向量，并提取每个成分的第二个元素，放入一个储存姓氏的向量。”</p>
+<p>那么在r语言的命令行中的操作命令如下：<br>options(digits=2)</p>
+<blockquote>
+<p>Student &lt;- c(“John Davis”,”Angela Williams”, “Bullwinkle”, “Moose David”, “Jones Janice”, “Mark hammer”, “Cheryl Cushing”, “Reuven Ytzrhak”, “Greg Knox”,”Joel England”,”Mary Rayburn”)<br>Math &lt;- c(502,600,412,358,495,512,410,625,573,522)<br>Science &lt;- c(95,99,80,82,75,85,80,95,89,86)<br>English &lt;- c(25,22,18,15,20,28,15,30,27,18)<br>roster &lt;- data.frame(Student,Math,Science,English,StringsAsFactors=FALSE)<br>Error in data.frame(Student, Math, Science, English, StringsAsFactors = FALSE) :<br>参数值意味着不同的行数: 11, 10, 1<br>Student &lt;- c(“John Davis”,”Angela Williams”, “Bullwinkle Moose”, “David Jones”, “Janice Markhammer”, “Cheryl Cushing”, “Reuven Ytzrhak”, “Greg Knox”,”Joel England”,”Mary Rayburn”)<br>roster &lt;- data.frame(Student,Math,Science,English,StringsAsFactors=FALSE)<br>roster<br>Student Math Science English StringsAsFactors<br>1         John Davis  502      95      25            FALSE<br>2    Angela Williams  600      99      22            FALSE<br>3   Bullwinkle Moose  412      80      18            FALSE<br>4        David Jones  358      82      15            FALSE<br>5  Janice Markhammer  495      75      20            FALSE<br>6     Cheryl Cushing  512      85      28            FALSE<br>7     Reuven Ytzrhak  410      80      15            FALSE<br>8          Greg Knox  625      95      30            FALSE<br>9       Joel England  573      89      27            FALSE<br>10      Mary Rayburn  522      86      18            FALSE<br>z &lt;- scale(roster[,2:4])<br>score &lt;- apply(z,1,mean)<br>roster &lt;- cbind(roster,score)<br>y &lt;- quantile(score,c(.8,.6,.4,.2))<br>roster$grade[score&gt;=y[1]] &lt;- “A”<br>roster$grade[score<y[1]&score>=y[2]] &lt;- “B”<br>roster$grade[score<y[2]&score>=y[3]] &lt;- “C”<br>roster$grade[score<y[3]&score>=y[4]] &lt;- “D”<br>roster$grade[score&lt;y[4]] &lt;- “F”<br>name &lt;- strsplit(roster$Student),””)<br>错误: 意外的’,’ in “name &lt;- strsplit(roster$Student),”<br>name &lt;- strsplit((roster$Student),””)<br>Error in strsplit((roster$Student), “”) : 非字符参数<br>name &lt;- strsplit((roster$Student),” “)<br>Error in strsplit((roster$Student), “ “) : 非字符参数<br>name &lt;- strsplit((roster$Student), “ “)<br>Error in strsplit((roster$Student), “ “) : 非字符参数<br>name &lt;- strsplit((roster$Student), “ “)<br>Error in strsplit((roster$Student), “ “) : 非字符参数<br>class(roster$Student)<br>[1] “factor”<br>roster$Student&lt;-as.character(roster$Student)<br>name &lt;- strsplit((roster$Student), “ “)<br>lastname &lt;- sapply(name,”[“,2)<br>firstname &lt;- sapply(name,”[“,1)<br>roster &lt;- cbind(firstname,lastname,roster[,-1])<br>roster &lt;- roster[order(lastname,firstname),]<br>roster<br>firstname   lastname Math Science English StringsAsFactors score grade<br>6      Cheryl    Cushing  512      85      28            FALSE  0.35     C<br>1        John      Davis  502      95      25            FALSE  0.56     B<br>9        Joel    England  573      89      27            FALSE  0.70     B<br>4       David      Jones  358      82      15            FALSE -1.16     F<br>8        Greg       Knox  625      95      30            FALSE  1.34     A<br>5      Janice Markhammer  495      75      20            FALSE -0.63     D<br>3  Bullwinkle      Moose  412      80      18            FALSE -0.86     D<br>10       Mary    Rayburn  522      86      18            FALSE -0.18     C<br>2      Angela   Williams  600      99      22            FALSE  0.92     A<br>7      Reuven    Ytzrhak  410      80      15            FALSE -1.05     F</y[3]&score></y[2]&score></y[1]&score></p>
+<p> 中间也出了些许问题，包括strsplit这个命令，因为之前student这个向量里面所有的元素并不是character，而是factor，导致roster$student这个参数不符合规定，非字符参数。上网查了一下，好像类似问题还不少，只要用as.character强制转换一下格式，就好了😀<br>最后可以看出来，用r语言还是很方便实现数据处理的，不过在管理上缺陷很大，需要自己写函数实现各种各样的要求，在这方面比spss\sas有不小的差距。<br>接下来该学习写自己的函数来实现命令了，核心是语句的概念</p>
+</blockquote>
 
       
     </div>
@@ -304,13 +310,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2017/04/21/随笔-4-21/">随笔-4.21</a></p>
+        <p><span>本文标题:</span><a href="/2017/05/03/R语言学习-2/">R语言学习(2)</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">euphy</a></p>
-        <p><span>发布时间:</span>2017-04-21, 13:07:22</p>
-        <p><span>最后更新:</span>2017-04-21, 13:19:27</p>
+        <p><span>发布时间:</span>2017-05-03, 15:12:11</p>
+        <p><span>最后更新:</span>2017-05-03, 17:10:28</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/04/21/随笔-4-21/" title="随笔-4.21">http://yoursite.com/2017/04/21/随笔-4-21/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2017/04/21/随笔-4-21/　　作者: euphy" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2017/05/03/R语言学习-2/" title="R语言学习(2)">http://yoursite.com/2017/05/03/R语言学习-2/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2017/05/03/R语言学习-2/　　作者: euphy" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -323,17 +329,11 @@
     <nav id="article-nav">
         
             <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2017/04/21/R语言入门学习与感想-1/">
-                    R语言入门学习与感想(1)
+                <a href="/2017/04/26/随笔（2）/">
+                    随笔（2）
                 </a>
             </div>
         
-        
-            <div id="article-nav-older" class="article-nav-title">
-                <a href="/2017/04/22/实验室日志（1）/">
-                    实验室日志（1）
-                </a>
-            </div>
         
     </nav>
 
@@ -379,7 +379,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"随笔-4.21　| kirito1234567890　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"R语言学习(2)　| kirito1234567890　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -398,8 +398,8 @@
     <div id="disqus_thread"></div>
     <script>
         var disqus_config = function(){
-            this.page.url = 'http://yoursite.com/2017/04/21/随笔-4-21/';
-            this.page.identifier = '2017/04/21/随笔-4-21/';
+            this.page.url = 'http://yoursite.com/2017/05/03/R语言学习-2/';
+            this.page.identifier = '2017/05/03/R语言学习-2/';
         };
         var loadComment = function(){
             var d = document, s = d.createElement('script');
@@ -421,7 +421,7 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/04/21/R语言入门学习与感想-1/" title="上一篇: R语言入门学习与感想(1)">
+            <a href="/2017/04/26/随笔（2）/" title="上一篇: 随笔（2）">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -429,9 +429,7 @@
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2017/04/22/实验室日志（1）/" title="下一篇: 实验室日志（1）">
-                <i class="fa fa-angle-right"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
     </div>
 
