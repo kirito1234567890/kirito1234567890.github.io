@@ -15,17 +15,17 @@
 
 
 
-<meta name="description" content="由一个数据处理方面的问题引起的对r语言基础命令的复习">
+<meta name="description" content="记录充满debug和configure，，以及修改NASA程序员代码的一天">
 <meta name="keywords">
 <meta property="og:type" content="article">
-<meta property="og:title" content="R语言学习(2)">
-<meta property="og:url" content="http://yoursite.com/2017/05/03/R语言学习-2/index.html">
+<meta property="og:title" content="livingstone2 开发日记(1)">
+<meta property="og:url" content="http://yoursite.com/2017/05/06/livingstone2-开发日记-1/index.html">
 <meta property="og:site_name" content="kirito1234567890">
-<meta property="og:description" content="由一个数据处理方面的问题引起的对r语言基础命令的复习">
-<meta property="og:updated_time" content="2017-05-03T09:10:28.000Z">
+<meta property="og:description" content="记录充满debug和configure，，以及修改NASA程序员代码的一天">
+<meta property="og:updated_time" content="2017-05-06T15:17:46.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="R语言学习(2)">
-<meta name="twitter:description" content="由一个数据处理方面的问题引起的对r语言基础命令的复习">
+<meta name="twitter:title" content="livingstone2 开发日记(1)">
+<meta name="twitter:description" content="记录充满debug和configure，，以及修改NASA程序员代码的一天">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -57,7 +57,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>R语言学习(2) | kirito1234567890</title>
+<title>livingstone2 开发日记(1) | kirito1234567890</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -257,11 +257,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-R语言学习-2" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-livingstone2-开发日记-1" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/05/03/R语言学习-2/" class="article-date">
-      <time datetime="2017-05-03T07:12:11.000Z" itemprop="datePublished">2017-05-03</time>
+      <a href="/2017/05/06/livingstone2-开发日记-1/" class="article-date">
+      <time datetime="2017-05-06T14:43:43.000Z" itemprop="datePublished">2017-05-06</time>
 </a>
 
 
@@ -276,7 +276,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      R语言学习(2)
+      livingstone2 开发日记(1)
     </h1>
   
 
@@ -293,15 +293,10 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>  由一个数据处理方面的问题引起的对r语言基础命令的复习</p>
-<a id="more"></a> 
-<pre><code>一组学生参加了数学、科 学和英语考试。为了给所有学生确定一个单一的成绩衡量指标，需要将这些科目的成绩组合起来。 另外，你还想将前20%的学生评定为A，接下来20%的学生评定为B，依次类推。最后，你希望按 字母顺序对学生排序.
-</code></pre><p>   这是一个数据处理和数据管理的基础入门问题，这几天的学习也是从第四单元看到了第五单元，截止到5.2，之前的介绍都是关于数据的处理的基本操作和命令，包括各种各样的概念和定义，也看到了很多包的帮助下，r语言的潜力到底有多大，我想就这个实例来总结一下之前基础的命令。<br>步骤如下：<br>步骤1 原始的学生花名册已经给出了。options(digits=2)限定了输出小数点后数字的 位数，更加便于阅读。<br>步骤2 由于数学、科学和英语考试的分值不同(均值和标准差相去甚远)，在组合之前需 要先让它们变得可以比较。一种方法是将变量进行标准化，这样每科考试的成绩就都是用单位标 准差来表示，而不是以原始的尺度来表示了。这个过程可以使用scale()函数来实现:<br>步骤3 然后，可以通过函数mean()来计算各行的均值以获得综合得分，并使用函数 cbind()将其添加到花名册中:<br>步骤4 函数quantile()给出了学生综合得分的百分位数。可以看到，成绩为A的分界点 为0.74，B的分界点为0.44，等等。<br>步骤5 通过使用逻辑运算符，你可以将学生的百分位数排名重编码为一个新的类别型成绩 2 变量。下面在数据框roster中创建了变量grade。<br>步骤6 你将使用函数strsplit()以空格为界把学生姓名拆分为姓氏和名字。把strsplit() 应用到一个字符串组成的向量上会返回一个列表<br>步骤7 你可以使用函数sapply()提取列表中每个成分的第一个元素，放入一个储存名字 的向量，并提取每个成分的第二个元素，放入一个储存姓氏的向量。”</p>
-<p>那么在r语言的命令行中的操作命令如下：<br>options(digits=2)</p>
-<blockquote>
-<p>Student &lt;- c(“John Davis”,”Angela Williams”, “Bullwinkle”, “Moose David”, “Jones Janice”, “Mark hammer”, “Cheryl Cushing”, “Reuven Ytzrhak”, “Greg Knox”,”Joel England”,”Mary Rayburn”)<br>Math &lt;- c(502,600,412,358,495,512,410,625,573,522)<br>Science &lt;- c(95,99,80,82,75,85,80,95,89,86)<br>English &lt;- c(25,22,18,15,20,28,15,30,27,18)<br>roster &lt;- data.frame(Student,Math,Science,English,StringsAsFactors=FALSE)<br>Error in data.frame(Student, Math, Science, English, StringsAsFactors = FALSE) :<br>参数值意味着不同的行数: 11, 10, 1<br>Student &lt;- c(“John Davis”,”Angela Williams”, “Bullwinkle Moose”, “David Jones”, “Janice Markhammer”, “Cheryl Cushing”, “Reuven Ytzrhak”, “Greg Knox”,”Joel England”,”Mary Rayburn”)<br>roster &lt;- data.frame(Student,Math,Science,English,StringsAsFactors=FALSE)<br>roster<br>Student Math Science English StringsAsFactors<br>1         John Davis  502      95      25            FALSE<br>2    Angela Williams  600      99      22            FALSE<br>3   Bullwinkle Moose  412      80      18            FALSE<br>4        David Jones  358      82      15            FALSE<br>5  Janice Markhammer  495      75      20            FALSE<br>6     Cheryl Cushing  512      85      28            FALSE<br>7     Reuven Ytzrhak  410      80      15            FALSE<br>8          Greg Knox  625      95      30            FALSE<br>9       Joel England  573      89      27            FALSE<br>10      Mary Rayburn  522      86      18            FALSE<br>z &lt;- scale(roster[,2:4])<br>score &lt;- apply(z,1,mean)<br>roster &lt;- cbind(roster,score)<br>y &lt;- quantile(score,c(.8,.6,.4,.2))<br>roster$grade[score&gt;=y[1]] &lt;- “A”<br>roster$grade[score<y[1]&score>=y[2]] &lt;- “B”<br>roster$grade[score<y[2]&score>=y[3]] &lt;- “C”<br>roster$grade[score<y[3]&score>=y[4]] &lt;- “D”<br>roster$grade[score&lt;y[4]] &lt;- “F”<br>name &lt;- strsplit(roster$Student),””)<br>错误: 意外的’,’ in “name &lt;- strsplit(roster$Student),”<br>name &lt;- strsplit((roster$Student),””)<br>Error in strsplit((roster$Student), “”) : 非字符参数<br>name &lt;- strsplit((roster$Student),” “)<br>Error in strsplit((roster$Student), “ “) : 非字符参数<br>name &lt;- strsplit((roster$Student), “ “)<br>Error in strsplit((roster$Student), “ “) : 非字符参数<br>name &lt;- strsplit((roster$Student), “ “)<br>Error in strsplit((roster$Student), “ “) : 非字符参数<br>class(roster$Student)<br>[1] “factor”<br>roster$Student&lt;-as.character(roster$Student)<br>name &lt;- strsplit((roster$Student), “ “)<br>lastname &lt;- sapply(name,”[“,2)<br>firstname &lt;- sapply(name,”[“,1)<br>roster &lt;- cbind(firstname,lastname,roster[,-1])<br>roster &lt;- roster[order(lastname,firstname),]<br>roster<br>firstname   lastname Math Science English StringsAsFactors score grade<br>6      Cheryl    Cushing  512      85      28            FALSE  0.35     C<br>1        John      Davis  502      95      25            FALSE  0.56     B<br>9        Joel    England  573      89      27            FALSE  0.70     B<br>4       David      Jones  358      82      15            FALSE -1.16     F<br>8        Greg       Knox  625      95      30            FALSE  1.34     A<br>5      Janice Markhammer  495      75      20            FALSE -0.63     D<br>3  Bullwinkle      Moose  412      80      18            FALSE -0.86     D<br>10       Mary    Rayburn  522      86      18            FALSE -0.18     C<br>2      Angela   Williams  600      99      22            FALSE  0.92     A<br>7      Reuven    Ytzrhak  410      80      15            FALSE -1.05     F</y[3]&score></y[2]&score></y[1]&score></p>
-<p> 中间也出了些许问题，包括strsplit这个命令，因为之前student这个向量里面所有的元素并不是character，而是factor，导致roster$student这个参数不符合规定，非字符参数。上网查了一下，好像类似问题还不少，只要用as.character强制转换一下格式，就好了😀<br>最后可以看出来，用r语言还是很方便实现数据处理的，不过在管理上缺陷很大，需要自己写函数实现各种各样的要求，在这方面比spss\sas有不小的差距。<br>接下来该学习写自己的函数来实现命令了，核心是语句的概念</p>
-</blockquote>
+        <p> 记录充满debug和configure，，以及修改NASA程序员代码的一天<br><a id="more"></a></p>
+<p>粗略一算，从认识Livingstone2到现在，已经大概有三个多星期了，从一开始的兴奋到急躁再到现在的崩溃，，可以说自己经历了很多吧。。。也是第一次接触真正在Linux平台上运行的人工智能软件，更是第一次全程操控使用后台控制器，甚至是第一次开发一个几乎在网上找不到任何资料的软件，我能够凭借的也就只有全英文的帮助文档和师兄曾经做过的安装指南（这个最实用了，，真心看不懂那些代码）</p>
+<p>大致介绍一下，Livingstone2是美国宇航局NASA早前开发的一款开源的人工智能软件，主要功能在于航天器模式识别和故障诊断，听起来很高端吧。。真正的论文上的翻译是Livingstone 使用一组多层次的定性逻辑模型来描述系统的行为，能够在最小人工干预的情况下高效、鲁棒地实现对航天器、生命支持系统、化工厂或者其他复杂系统的故障检测和诊断，具有能诊断并发出现的多项故障、提供具体故障原因、检测未知故障以及选择故障恢复方案等诸多强大的功能。。。。。并没有什么卵用，，目前用不到。。。NASA官网上的介绍是（前方英文预警）Livingstone2 is a reusable artificial intelligence (AI) software system designed to assist spacecraft, life support systems, chemical plants or other complex systems in operating robustly with minimal human supervision, even in the face of hardware failures or unexpected events. Livingstone2 diagnoses the current state of the spacecraft or other system and recommends commands or repair actions that will allow the system to continue operations.    简单的说，就是人工智能在航天器上的应用。。。。我只能这么理解了。</p>
+<p>比较坑的是。。这个软件虽然是开源的 ，但是却几乎没有更新过，，，Linux下的安装包还维持在12年前的水平。。。让我很尴尬。。。我装的是今年最新的ubuntu系统，，，，这么老的软件总有一种不祥的预感。。。果然，，，上来就出了一大堆的事情。。。下来的压缩包需要解压。。。。解压命令不知道。。。鬼知道解压完全了。。。然后是茫茫多的英文帮助文档，。。。。看了一大堆，唯一看懂的就是。。。首先，cd到对应的目录下，然后.／configure，。。。生成makefile文件，然后用make编译makefile并生成相应的文件。。最后make install。。结束，，，，然而并没有那么顺利。。从第一步开始，，就充斥着各种不同的错误，首先是缺乏编译环境，缺少库文件等等等等，，，然后是各种头文件语法错误，语句缺失，声明变量错误。。。我不禁开始怀疑NASA程序员的基本功了。。。坚持了一天的debug后，，，，受不了了全英文的帮助文档，，，就找了师兄要了一个曾经涉猎过这个软件的师兄写的一个安装文档。有人总结就是好事。。。（我也要总结一个。。虽然我会的不多）。。<br>首先，要先确保自己Linux系统中的各种必备文件和编译环境的版本，，以及所需要的jdk，mico,combact。。。等等的提前弄好。。。前面的都大致没问题，，就是在版本得选择上，有些冲突，我选择的版本都比较新，与文档不太一样，此处打上问号，然后是装jdk，java编译环境时，遇见了错误，，找不到文件，。。。然后是变异不成功，，，，，环境变量声明不对，全局变量也没有声明。。我怎么知道一个纯靠命令行组成的Linux，在哪找环境变量的改变地方，。。。。。好不容易照着网上的弄好了，，，，mico和combat的设定也出了问题，，安装过程很流畅，，但是找不到文档上所说的makein文件，改变不了参数。。。。。很尴尬。。于是就跳过了。。<br>开始一第一步。。。安装l2-tools,进入目录，configure。。。。出现了问题，gcc版本不对。。。太高了。。。我选的6.3.0.。。。而错误反馈说的是只认2.95.2及以上。。。唉。。。找到了configure文件，篡改了判断命令。。。成功过关。。<br>然后，，makefile的过程中，有错误了。。。头文件定义冲突加上变量声明错误。。。。。又回到文件里去篡改写好的头文件，都给删掉了。。。好不容易弄完了。。。重新走一遍。。。发现走不动。。显示unchanged。。。。两个生成的文件无法改变，导致连makefile都不行。。。唉。。重新来。。。。又不行，网上说需要忽略一些不必要的错误。。。我就用了make-i的命令，试一试，结果不行。。<br>我跳过了错误的那一步，，，，结果虽然l2-regress成功生成了test文件。。但是在最后cpp中运行l2-tools时，。。就尴尬了。。文件不存在。。。。陷入了死循环。。<br>痛苦的一天就在错误中结束了。。。唉，，希望明天的自己运气能好点。。😀</p>
 
       
     </div>
@@ -310,13 +305,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2017/05/03/R语言学习-2/">R语言学习(2)</a></p>
+        <p><span>本文标题:</span><a href="/2017/05/06/livingstone2-开发日记-1/">livingstone2 开发日记(1)</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">euphy</a></p>
-        <p><span>发布时间:</span>2017-05-03, 15:12:11</p>
-        <p><span>最后更新:</span>2017-05-03, 17:10:28</p>
+        <p><span>发布时间:</span>2017-05-06, 22:43:43</p>
+        <p><span>最后更新:</span>2017-05-06, 23:17:46</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/05/03/R语言学习-2/" title="R语言学习(2)">http://yoursite.com/2017/05/03/R语言学习-2/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2017/05/03/R语言学习-2/　　作者: euphy" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2017/05/06/livingstone2-开发日记-1/" title="livingstone2 开发日记(1)">http://yoursite.com/2017/05/06/livingstone2-开发日记-1/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2017/05/06/livingstone2-开发日记-1/　　作者: euphy" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -329,17 +324,11 @@
     <nav id="article-nav">
         
             <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2017/04/26/随笔（2）/">
-                    随笔（2）
+                <a href="/2017/05/03/R语言学习-2/">
+                    R语言学习(2)
                 </a>
             </div>
         
-        
-            <div id="article-nav-older" class="article-nav-title">
-                <a href="/2017/05/06/livingstone2-开发日记-1/">
-                    livingstone2 开发日记(1)
-                </a>
-            </div>
         
     </nav>
 
@@ -385,7 +374,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"R语言学习(2)　| kirito1234567890　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"livingstone2 开发日记(1)　| kirito1234567890　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -404,8 +393,8 @@
     <div id="disqus_thread"></div>
     <script>
         var disqus_config = function(){
-            this.page.url = 'http://yoursite.com/2017/05/03/R语言学习-2/';
-            this.page.identifier = '2017/05/03/R语言学习-2/';
+            this.page.url = 'http://yoursite.com/2017/05/06/livingstone2-开发日记-1/';
+            this.page.identifier = '2017/05/06/livingstone2-开发日记-1/';
         };
         var loadComment = function(){
             var d = document, s = d.createElement('script');
@@ -427,7 +416,7 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/04/26/随笔（2）/" title="上一篇: 随笔（2）">
+            <a href="/2017/05/03/R语言学习-2/" title="上一篇: R语言学习(2)">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -435,9 +424,7 @@
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2017/05/06/livingstone2-开发日记-1/" title="下一篇: livingstone2 开发日记(1)">
-                <i class="fa fa-angle-right"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
     </div>
 
